@@ -1,0 +1,63 @@
+.wrapper {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--back-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px 50px 30px 50px;
+  border: 1px solid var(--border-transparent);
+  border-radius: 20px;
+  background-color: var(--back-color);
+  transition: border-color 200ms ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  &:hover {
+    border-color: var(--primary-main);
+  }
+}
+
+.text {
+  color: var(--primary-main);
+  font-size: 26px;
+}
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  color: var(--primary-light);
+  top: 20px;
+  right: 20px;
+  transition: color 200ms ease-in;
+
+  &:hover {
+    color: var(--primary-main);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .form {
+    padding: 30px;
+  }
+  .text {
+    font-size: 22px;
+  }
+}

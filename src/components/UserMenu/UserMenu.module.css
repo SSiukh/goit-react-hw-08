@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.greet {
+  color: var(--primary-main);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 770px) {
+  .greet {
+    display: none;
+  }
+}

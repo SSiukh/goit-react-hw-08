@@ -1,0 +1,38 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid var(--border-transparent);
+  width: 100%;
+  border-radius: 10px;
+  transition: background-color 250ms ease-in, border-color 250ms ease-in;
+
+  &:hover {
+    background-color: var(--back-transparent);
+    border-color: var(--border-transparent-hover);
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.block {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.text {
+  color: var(--primary-main);
+  font-size: 16px;
+}
+.icon {
+  color: var(--primary-main);
+}
