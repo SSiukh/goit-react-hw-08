@@ -5,6 +5,7 @@ import {
   deleteContact,
   editContact,
 } from './operations';
+import { logout } from '../auth/operations';
 
 const handlePending = state => {
   state.loading = true;
@@ -54,7 +55,8 @@ const slice = createSlice({
           item.id === payload.id ? { ...item, ...payload } : item
         );
       })
-      .addCase(editContact.rejected, handleRejected);
+      .addCase(editContact.rejected, handleRejected)
+      .addCase(logout.fulfilled, () => initialState);
   },
 });
 
